@@ -2,6 +2,7 @@ import { useState } from 'react';
 import styled from 'styled-components';
 import { Button } from 'react-bootstrap';
 import Layout from '../components/Layout';
+import Reward from '../components/Reward';
 import CoffeeList from '../components/CoffeeList';
 import { CoffeeProps, coffeeDB } from '../data';
 import coffeeBG from '../assets/images/coffeebg.jpg';
@@ -24,6 +25,8 @@ function Home() {
 	return (
 		<Layout>
 			<HomeImageContainer />
+			<Reward />
+
 			<Inner>
 				<CoffeeList list={list} />
 			</Inner>
