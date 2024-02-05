@@ -2,10 +2,10 @@ import { useState } from 'react';
 import styled from 'styled-components';
 import { Button } from 'react-bootstrap';
 import Layout from '../components/Layout';
+import Visual from '../components/Visual';
 import Reward from '../components/Reward';
 import CoffeeList from '../components/CoffeeList';
 import { CoffeeProps, coffeeDB } from '../data';
-import coffeeBG from '../assets/images/coffeebg.jpg';
 
 function Home() {
 	const limit = 3;
@@ -24,7 +24,7 @@ function Home() {
 
 	return (
 		<Layout>
-			<HomeImageContainer />
+			<Visual />
 			<Reward />
 
 			<Inner>
@@ -41,12 +41,7 @@ function Home() {
 		</Layout>
 	);
 }
-const HomeImageContainer = styled.div`
-	height: 400px;
-	background-image: url(${coffeeBG});
-	background-position: center;
-	background-size: cover;
-`;
+
 const Inner = styled.div`
 	max-width: 1100px;
 	margin: 0 auto;
