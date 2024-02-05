@@ -7,7 +7,6 @@ import NotFound from './pages/NotFound';
 import './assets/css/bootstrap.min.css';
 
 function App() {
-	const baseURL = '/programmers-coffee-shop';
 	return (
 		<>
 			<BrowserRouter basename={import.meta.env.BASE_URL}>
