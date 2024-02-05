@@ -7,13 +7,14 @@ import NotFound from './pages/NotFound';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
+	console.log(import.meta.env.BASE_URL);
 	return (
 		<>
 			<BrowserRouter basename={import.meta.env.BASE_URL}>
 				<Routes>
 					<Route path='/' element={<Home />} />
 					<Route path='/coffee' element={<CoffeePage />} />
-					<Route path='/:id' element={<Detail />} />
+					<Route path='/coffee/:id' element={<Detail />} />
 					<Route path='/*' element={<NotFound />} />
 				</Routes>
 			</BrowserRouter>

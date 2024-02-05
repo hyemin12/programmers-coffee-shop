@@ -7,7 +7,7 @@ const CoffeeItem = ({ image, name, id }: CoffeeProps) => {
 	const { pathname } = useLocation();
 	return (
 		<CoffeeItemStyle $isHomeScreen={pathname === '/'} xs={12} sm={6} md={4}>
-			<Link to={`/${id}`}>
+			<Link to={`/coffee/${id}`}>
 				<img src={image} alt={name} />
 			</Link>
 
