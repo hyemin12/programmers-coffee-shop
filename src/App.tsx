@@ -9,7 +9,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 function App() {
 	return (
 		<>
-			<BrowserRouter basename={process.env.PUBLIC_URL}>
+			<BrowserRouter basename={import.meta.env.BASE_URL}>
 				<Routes>
 					<Route path='/' element={<Home />} />
 					<Route path='/coffee' element={<CoffeePage />} />
