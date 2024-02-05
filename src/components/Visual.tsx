@@ -1,12 +1,11 @@
-import React from 'react';
+import styled, { css, keyframes } from 'styled-components';
+import { Button } from 'react-bootstrap';
 import Backdrop from '../assets/images/2024_spring_top_bg.jpg';
 
 import logo from '../assets/images/2024_spring_top_logo.png';
 import Drink1 from '../assets/images/2024_spring_top_drink1.png';
 import Drink2 from '../assets/images/2024_spring_top_drink2.png';
 import Drink3 from '../assets/images/2024_spring_top_drink3.png';
-import styled from 'styled-components';
-import { Button } from 'react-bootstrap';
 
 const Visual = () => {
 	return (
@@ -23,6 +22,16 @@ const Visual = () => {
 		</Container>
 	);
 };
+
+const fadeIn = keyframes`
+  0%{opacity:0}
+  100%{opacity:1}
+`;
+
+const fadeInAnimation = css`
+	animation: ${fadeIn} 1s ease-out;
+	animation-fill-mode: both;
+`;
 
 const Container = styled.div`
 	height: 32vw;
@@ -41,30 +50,39 @@ const LogoWrapper = styled.div`
 		display: block;
 		width: 100%;
 		margin-bottom: 2em;
+		${fadeInAnimation};
+		animation-delay: 0.2s;
 	}
 	button {
 		display: block;
 		margin: 0 auto;
+		${fadeInAnimation}
+		animation-delay:1.5s;
 	}
 `;
 const DrinkGroup = styled.div`
 	img {
 		position: absolute;
+		${fadeInAnimation};
 	}
 	img:first-child {
 		width: 16.4%;
 		top: 22.8%;
 		left: 41.2%;
+		animation-delay: 0.5s;
 	}
 	img:nth-child(2) {
 		width: 14.8%;
 		top: 17%;
 		left: 61.5%;
+		animation-delay: 0.8s;
 	}
 	img:last-child {
 		width: 20.6%;
 		top: 51.9%;
 		right: 30.7%;
+		animation-delay: 1.2s;
 	}
 `;
+
 export default Visual;
