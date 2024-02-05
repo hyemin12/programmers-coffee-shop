@@ -4,6 +4,8 @@ import Detail from './pages/Detail';
 import CoffeePage from './pages/CoffeePage';
 import NotFound from './pages/NotFound';
 
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 function App() {
 	return (
 		<>
