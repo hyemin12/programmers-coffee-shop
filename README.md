@@ -9,5 +9,5 @@
 - styled-components
 - zustand
 
-### 📘[배포사이트](https://hyemin12.github.io/programmers-coffee-shop/)
+### 📘[배포사이트](https://programmerscoffeeshop.netlify.app)
 
