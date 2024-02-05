@@ -9,7 +9,17 @@ const Detail = () => {
 	const { id } = useParams();
 	const [coffee] = coffeeDB.filter((data) => data.id === Number(id));
 
-	if (!coffee) return <Layout>일치하는 커피가 없음</Layout>;
+	if (!coffee)
+		return (
+			<Layout>
+				<CannotFind>
+					<h3>일치하는 커피가 없음</h3>
+					<Button href='/' variant='success'>
+						메인으로 돌아가기
+					</Button>
+				</CannotFind>
+			</Layout>
+		);
 	return (
 		<Layout $maxWidth>
 			<Row>
@@ -46,6 +56,16 @@ const Detail = () => {
 
 const handleLocalString = (num: number): string => num.toLocaleString();
 
+const CannotFind = styled.div`
+	min-height: calc(100vh - 145px);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	h3 {
+		margin-bottom: 1em;
+	}
+`;
 const CoffeeImgWrapper = styled(Col)`
 	max-width: 400px;
 	img {
