@@ -4,10 +4,9 @@ import Detail from './pages/Detail';
 import CoffeePage from './pages/CoffeePage';
 import NotFound from './pages/NotFound';
 
-import 'bootstrap/dist/css/bootstrap.min.css';
+import './assets/css/bootstrap.min.css';
 
 function App() {
-	console.log(import.meta.env.BASE_URL);
 	return (
 		<>
 			<BrowserRouter basename={import.meta.env.BASE_URL}>
