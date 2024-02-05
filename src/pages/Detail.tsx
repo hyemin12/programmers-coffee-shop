@@ -1,4 +1,3 @@
-import React from 'react';
 import { useParams } from 'react-router-dom';
 import { coffeeDB } from '../data';
 import Layout from '../components/Layout';
