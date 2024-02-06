@@ -5,7 +5,7 @@ import CoffeeList from '../components/CoffeeList';
 import useMenuStore, { CategoryType } from '../store/menu';
 import decafImg from '../assets/images/logo_decaf.png';
 
-const CoffeePage = () => {
+const Menu = () => {
 	const { categories, AllMenu } = useMenuStore();
 	return (
 		<Layout $maxWidth>
@@ -54,4 +54,4 @@ const CategoryTitle = styled(Row)`
 	}
 `;
 
-export default CoffeePage;
+export default Menu;

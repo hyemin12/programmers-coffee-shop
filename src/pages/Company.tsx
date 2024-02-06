@@ -5,7 +5,7 @@ import mainImg from '../assets/images/coffeebg.jpg';
 import labImg from '../assets/images/lab.jpg';
 import Layout from '../components/Layout';
 
-const CompanyPage = () => {
+const Company = () => {
 	return (
 		<Layout $maxWidth>
 			<MainImgStyle />
@@ -81,4 +81,4 @@ const PointFont = styled.h4`
 	color: #006633;
 	font-style: italic;
 `;
-export default CompanyPage;
+export default Company;
