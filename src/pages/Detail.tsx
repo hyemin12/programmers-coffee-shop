@@ -59,7 +59,6 @@ const Detail = () => {
 const handleLocalString = (num: number): string => num.toLocaleString();
 
 const CannotFind = styled.div`
-	min-height: calc(100vh - 145px);
 	display: flex;
 	justify-content: center;
 	align-items: center;

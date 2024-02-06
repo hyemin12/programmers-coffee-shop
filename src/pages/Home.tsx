@@ -11,12 +11,12 @@ function Home() {
 	const { setMenu, menu, AllMenu } = useMenuStore();
 	const [page, setPage] = useState(1);
 
+	console.log(menu, AllMenu);
 	const getMoreCoffee = () => {
 		const limit = 3;
 		const nextPage = page + 1;
 		const startItem = nextPage * limit;
 		const endItem = startItem + limit;
-
 		const newItems: CoffeeProps[] = AllMenu.slice(startItem, endItem);
 		setMenu(newItems);
 		setPage(nextPage);
