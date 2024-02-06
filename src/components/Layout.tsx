@@ -16,6 +16,7 @@ const Layout = ({ children, $maxWidth = false }: { children: React.ReactNode; $m
 
 const Inner = styled.div<{ $maxWidth: boolean }>`
 	max-width: ${({ $maxWidth }) => ($maxWidth ? '1100px' : '100%')};
+	min-height: calc(100vh - 145px);
 	margin: 0 auto;
 	padding: ${({ $maxWidth }) => ($maxWidth ? '3em 0' : 0)};
 `;
