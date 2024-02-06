@@ -8,17 +8,18 @@ import CoffeeList from '../components/CoffeeList';
 import { CoffeeProps, coffeeDB } from '../data';
 
 function Home() {
-	const limit = 3;
-	const [page, setPage] = useState(0);
+	const [page, setPage] = useState(1);
 	const [list, setList] = useState<CoffeeProps[]>(coffeeDB.slice(0, 6));
 
 	const getMoreCoffee = () => {
+		const limit = 3;
 		const nextPage = page + 1;
-		const offset = limit * (nextPage + 1) + 3;
-		const startItem = page === 0 ? 6 : nextPage * limit;
+		const startItem = nextPage * limit;
+		const endItem = startItem + limit;
 
-		const newItems: CoffeeProps[] = coffeeDB.slice(startItem, offset);
+		const newItems: CoffeeProps[] = coffeeDB.slice(startItem, endItem);
 		setList([...list, ...newItems]);
+
 		setPage(nextPage);
 	};
 
