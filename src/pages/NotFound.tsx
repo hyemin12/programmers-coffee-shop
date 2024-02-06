@@ -4,7 +4,7 @@ import { Button } from 'react-bootstrap';
 
 const NotFound = () => {
 	return (
-		<Layout>
+		<Layout $maxWidth>
 			<NotFoundContainer>
 				<h1>Error 404!</h1>
 				<h3>페이지를 찾을 수 없습니다.</h3>
@@ -23,7 +23,6 @@ const NotFoundContainer = styled.div`
 	justify-content: center;
 	align-items: center;
 	flex-direction: column;
-	min-height: calc(100vh - 145px);
 	h1,
 	h3 {
 		font-weight: 800;
