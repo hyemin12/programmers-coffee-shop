@@ -10,18 +10,7 @@ import coffee9 from './assets/images/coffee9.jpg';
 import coffee10 from './assets/images/coffee10.jpg';
 import coffee11 from './assets/images/coffee11.jpg';
 import coffee12 from './assets/images/coffee12.jpg';
-
-export type CategoryType = 'coffee' | 'blended' | 'seasonalMenu';
-
-export interface CoffeeProps {
-	id: number;
-	image: string;
-	name: string;
-	nameEn: string;
-	price: number;
-	description: string;
-	category: CategoryType;
-}
+import { CoffeeProps } from './store/menu';
 
 export const coffeeDB: CoffeeProps[] = [
 	{

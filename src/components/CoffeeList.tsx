@@ -1,7 +1,7 @@
 import { Container, Row } from 'react-bootstrap';
 import styled from 'styled-components';
 import CoffeeItem from './CoffeeItem';
-import { CoffeeProps } from '../data';
+import { CoffeeProps } from '../store/menu';
 
 const CoffeeList = ({ list }: { list: CoffeeProps[] }) => {
 	return (

@@ -2,17 +2,17 @@ import styled from 'styled-components';
 import { Row } from 'react-bootstrap';
 import Layout from '../components/Layout';
 import CoffeeList from '../components/CoffeeList';
-import { CategoryType, coffeeDB } from '../data';
+import useMenuStore, { CategoryType } from '../store/menu';
 import decafImg from '../assets/images/logo_decaf.png';
 
 const CoffeePage = () => {
-	const categories: CategoryType[] = ['seasonalMenu', 'coffee', 'blended'];
+	const { categories, AllMenu } = useMenuStore();
 	return (
 		<Layout $maxWidth>
 			{categories.map((category) => (
 				<section key={category}>
 					<FilterItem category={category} />
-					<CoffeeList list={coffeeDB.filter((data) => data.category === category)} />
+					<CoffeeList list={AllMenu.filter((data) => data.category === category)} />
 				</section>
 			))}
 		</Layout>

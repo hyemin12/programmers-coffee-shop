@@ -7,7 +7,6 @@
 - typescript
 - react-bootstrap
 - styled-components
-- zustand
 
 ### 📘[배포사이트](https://programmerscoffeeshop.netlify.app)
 

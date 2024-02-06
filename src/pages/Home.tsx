@@ -1,15 +1,15 @@
 import { useState } from 'react';
-import styled from 'styled-components';
 import { Button } from 'react-bootstrap';
+import styled from 'styled-components';
 import Layout from '../components/Layout';
 import Visual from '../components/Visual';
 import Reward from '../components/Reward';
 import CoffeeList from '../components/CoffeeList';
-import { CoffeeProps, coffeeDB } from '../data';
+import useMenuStore, { CoffeeProps } from '../store/menu';
 
 function Home() {
+	const { setMenu, menu, AllMenu } = useMenuStore();
 	const [page, setPage] = useState(1);
-	const [list, setList] = useState<CoffeeProps[]>(coffeeDB.slice(0, 6));
 
 	const getMoreCoffee = () => {
 		const limit = 3;
@@ -17,9 +17,8 @@ function Home() {
 		const startItem = nextPage * limit;
 		const endItem = startItem + limit;
 
-		const newItems: CoffeeProps[] = coffeeDB.slice(startItem, endItem);
-		setList([...list, ...newItems]);
-
+		const newItems: CoffeeProps[] = AllMenu.slice(startItem, endItem);
+		setMenu(newItems);
 		setPage(nextPage);
 	};
 
@@ -29,10 +28,10 @@ function Home() {
 			<Reward />
 
 			<Inner>
-				<CoffeeList list={list} />
+				<CoffeeList list={menu} />
 			</Inner>
 
-			{list.length < coffeeDB.length && (
+			{menu.length < AllMenu.length && (
 				<ButtonRow>
 					<Button variant='outline-success' onClick={getMoreCoffee}>
 						더보기

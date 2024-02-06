@@ -17,6 +17,7 @@ const NotFound = () => {
 		</Layout>
 	);
 };
+
 const NotFoundContainer = styled.div`
 	display: flex;
 	justify-content: center;

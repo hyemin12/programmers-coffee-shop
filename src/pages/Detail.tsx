@@ -1,13 +1,14 @@
 import { useParams } from 'react-router-dom';
-import { coffeeDB } from '../data';
-import Layout from '../components/Layout';
 import { Button, Col, Row } from 'react-bootstrap';
 import styled from 'styled-components';
+import Layout from '../components/Layout';
+import useMenuStore from '../store/menu';
 
 /** 커피이미지, 커피명, 커피설명, 커피가격, 카드에 담기 버튼 */
 const Detail = () => {
 	const { id } = useParams();
-	const [coffee] = coffeeDB.filter((data) => data.id === Number(id));
+	const { AllMenu } = useMenuStore();
+	const [coffee] = AllMenu.filter((data) => data.id === Number(id));
 
 	if (!coffee)
 		return (
@@ -20,6 +21,7 @@ const Detail = () => {
 				</CannotFind>
 			</Layout>
 		);
+
 	return (
 		<Layout $maxWidth>
 			<Row>

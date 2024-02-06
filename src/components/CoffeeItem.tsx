@@ -1,7 +1,7 @@
 import { Col } from 'react-bootstrap';
 import styled from 'styled-components';
 import { Link, useLocation } from 'react-router-dom';
-import { CoffeeProps } from '../data';
+import { CoffeeProps } from '../store/menu';
 
 const CoffeeItem = ({ image, name, id }: CoffeeProps) => {
 	const { pathname } = useLocation();
