@@ -1,8 +1,11 @@
 import { Container, Nav, Navbar } from 'react-bootstrap';
-import { NavLink } from 'react-router-dom';
+import { NavLink, Link } from 'react-router-dom';
 import styled from 'styled-components';
+import cartIcon from '../assets/images/shopping-cart.png';
+import useCartStore from '../store/cart';
 
 const NavComponents = () => {
+	const { cartItems } = useCartStore();
 	const menu = [
 		{ path: '/coffee', name: 'MENU' },
 		{ path: '/company', name: 'starbucks' },
@@ -19,6 +22,10 @@ const NavComponents = () => {
 						</LinkStyle>
 					))}
 				</Nav>
+				<CartBtn to='/cart'>
+					<img src={cartIcon} alt='장바구니' />
+					{cartItems.length > 0 && <span>{cartItems.length}</span>}
+				</CartBtn>
 			</Container>
 		</NavBarStyle>
 	);
@@ -42,6 +49,13 @@ const LinkStyle = styled(NavLink)`
 	&:hover {
 		color: #f6f5ef;
 		text-decoration: underline;
+	}
+`;
+const CartBtn = styled(Link)`
+	cursor: pointer;
+	img {
+		width: 24px;
+		height: 24px;
 	}
 `;
 

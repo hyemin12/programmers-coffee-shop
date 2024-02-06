@@ -4,6 +4,7 @@ import Detail from './pages/Detail';
 import Menu from './pages/Menu';
 import NotFound from './pages/NotFound';
 import Company from './pages/Company';
+import Cart from './pages/Cart';
 
 import './assets/css/bootstrap.min.css';
 
@@ -15,6 +16,7 @@ function App() {
 					<Route path='/' element={<Home />} />
 					<Route path='/coffee' element={<Menu />} />
 					<Route path='/coffee/:id' element={<Detail />} />
+					<Route path='/cart' element={<Cart />} />
 					<Route path='/company' element={<Company />} />
 					<Route path='/*' element={<NotFound />} />
 				</Routes>
