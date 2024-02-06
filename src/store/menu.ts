@@ -1,5 +1,4 @@
 import { create } from 'zustand';
-import { devtools, persist } from 'zustand/middleware';
 import { coffeeDB } from '../data';
 
 export type CategoryType = 'coffee' | 'blended' | 'seasonalMenu';
@@ -21,20 +20,13 @@ interface CoffeeState {
 	setMenu: (items: CoffeeProps[]) => void;
 }
 
-const useMenuStore = create<CoffeeState>()(
-	devtools(
-		persist(
-			(set) => ({
-				AllMenu: coffeeDB,
-				menu: [],
-				categories: ['coffee', 'blended', 'seasonalMenu'],
-				setMenu: (items: CoffeeProps[]) => set((state) => ({ menu: [...state.menu, ...items] })),
-			}),
-			{
-				name: 'menu-storage',
-			}
-		)
-	)
-);
+const initialState = coffeeDB.slice(0, 6);
+console.log('initialState', initialState);
+const useMenuStore = create<CoffeeState>((set) => ({
+	AllMenu: coffeeDB,
+	menu: initialState,
+	categories: ['coffee', 'blended', 'seasonalMenu'],
+	setMenu: (items: CoffeeProps[]) => set((state) => ({ menu: [...state.menu, ...items] })),
+}));
 
 export default useMenuStore;
