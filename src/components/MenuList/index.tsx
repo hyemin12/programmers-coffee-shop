@@ -1,14 +1,14 @@
 import { Container, Row } from 'react-bootstrap';
 import styled from 'styled-components';
-import CoffeeItem from './CoffeeItem';
-import { CoffeeProps } from '../store/menu';
+import MenuItem from '../MenuItem';
+import { MenuProps } from '../../store/menu';
 
-const CoffeeList = ({ list }: { list: CoffeeProps[] }) => {
+const MenuList = ({ list }: { list: MenuProps[] }) => {
 	return (
 		<ListContainerStyle>
 			<Row>
 				{list.map((coffee) => (
-					<CoffeeItem key={coffee.name} {...coffee} />
+					<MenuItem key={coffee.name} {...coffee} />
 				))}
 			</Row>
 		</ListContainerStyle>
@@ -17,4 +17,4 @@ const CoffeeList = ({ list }: { list: CoffeeProps[] }) => {
 const ListContainerStyle = styled(Container)`
 	padding: 2em 0;
 `;
-export default CoffeeList;
+export default MenuList;

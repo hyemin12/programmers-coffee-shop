@@ -1,14 +1,22 @@
 import { useParams } from 'react-router-dom';
 import { Button, Col, Row } from 'react-bootstrap';
-import styled from 'styled-components';
-import Layout from '../components/Layout';
-import useMenuStore from '../store/menu';
+import Layout from '../../components/Layout';
+import useMenuStore from '../../store/menu';
+import useCartStore from '../../store/cart';
+import { handleLocalString } from '../../util/handleLocalString';
+import { CannotFind, CoffeeImgWrapper, Description, NameWrapper, PriceWrapper } from './Detail.styles';
 
 /** 커피이미지, 커피명, 커피설명, 커피가격, 카드에 담기 버튼 */
 const Detail = () => {
 	const { id } = useParams();
 	const { AllMenu } = useMenuStore();
+	const { addCartItem } = useCartStore();
 	const [coffee] = AllMenu.filter((data) => data.id === Number(id));
+
+	const addCartItemHandler = () => {
+		const item = { ...coffee, quantity: 1 };
+		addCartItem(item);
+	};
 
 	if (!coffee)
 		return (
@@ -46,7 +54,7 @@ const Detail = () => {
 						</li>
 					</PriceWrapper>
 					<div className='d-grid'>
-						<Button variant='outline-success' size='lg'>
+						<Button variant='outline-success' size='lg' onClick={addCartItemHandler}>
 							장바구니에 담기
 						</Button>
 					</div>
@@ -56,59 +64,4 @@ const Detail = () => {
 	);
 };
 
-const handleLocalString = (num: number): string => num.toLocaleString();
-
-const CannotFind = styled.div`
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	flex-direction: column;
-	h3 {
-		margin-bottom: 1em;
-	}
-`;
-const CoffeeImgWrapper = styled(Col)`
-	max-width: 400px;
-	img {
-		display: block;
-		width: 100%;
-		object-fit: cover;
-	}
-`;
-const NameWrapper = styled.div`
-	border-bottom: 2px solid #333;
-	h3 {
-		font-weight: bold;
-		margin-bottom: 0;
-	}
-	p {
-		color: #666;
-	}
-`;
-const Description = styled.p`
-	padding: 1em 0;
-`;
-const PriceWrapper = styled.ul`
-	display: flex;
-	justify-content: space-between;
-	margin: 0;
-	margin-bottom: 1em;
-	padding: 0.5em 0;
-	border-top: 1px solid #ddd;
-
-	li {
-		list-style: none;
-		width: 100%;
-		text-align: center;
-		&:first-child {
-			border-right: 1px dotted #ddd;
-		}
-		&:last-child {
-			border-left: 1px dotted #ddd;
-		}
-		p {
-			margin-bottom: 0;
-		}
-	}
-`;
 export default Detail;

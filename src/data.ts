@@ -10,9 +10,9 @@ import coffee9 from './assets/images/coffee9.jpg';
 import coffee10 from './assets/images/coffee10.jpg';
 import coffee11 from './assets/images/coffee11.jpg';
 import coffee12 from './assets/images/coffee12.jpg';
-import { CoffeeProps } from './store/menu';
+import { MenuProps } from './store/menu';
 
-export const coffeeDB: CoffeeProps[] = [
+export const coffeeDB: MenuProps[] = [
 	{
 		id: 0,
 		name: '아이스 카페 아메리카노',

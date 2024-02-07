@@ -1,22 +1,7 @@
 import { Col } from 'react-bootstrap';
 import styled from 'styled-components';
-import { Link, useLocation } from 'react-router-dom';
-import { CoffeeProps } from '../store/menu';
 
-const CoffeeItem = ({ image, name, id }: CoffeeProps) => {
-	const { pathname } = useLocation();
-	return (
-		<CoffeeItemStyle $isHomeScreen={pathname === '/'} xs={12} sm={6} md={4}>
-			<Link to={`/coffee/${id}`}>
-				<img src={image} alt={name} />
-			</Link>
-
-			<h4>{name}</h4>
-		</CoffeeItemStyle>
-	);
-};
-
-const CoffeeItemStyle = styled(Col)<{ $isHomeScreen: boolean }>`
+export const MenuItemStyle = styled(Col)<{ $isHomeScreen: boolean }>`
 	flex-grow: 1;
 	a {
 		display: block;
@@ -48,4 +33,3 @@ const CoffeeItemStyle = styled(Col)<{ $isHomeScreen: boolean }>`
 		max-width: 25%;
 	}`}
 `;
-export default CoffeeItem;

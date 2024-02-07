@@ -52,10 +52,25 @@ const LinkStyle = styled(NavLink)`
 	}
 `;
 const CartBtn = styled(Link)`
+	position: relative;
 	cursor: pointer;
 	img {
 		width: 24px;
 		height: 24px;
+	}
+	span {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 16px;
+		height: 16px;
+		background-color: tomato;
+		border-radius: 50%;
+		color: #fff;
+		font-size: 0.7em;
+		position: absolute;
+		top: -5px;
+		right: -13px;
 	}
 `;
 

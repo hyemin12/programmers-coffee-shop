@@ -3,7 +3,7 @@ import { coffeeDB } from '../data';
 
 export type CategoryType = 'coffee' | 'blended' | 'seasonalMenu';
 
-export interface CoffeeProps {
+export interface MenuProps {
 	id: number;
 	image: string;
 	name: string;
@@ -13,20 +13,20 @@ export interface CoffeeProps {
 	category: CategoryType;
 }
 
-interface CoffeeState {
-	AllMenu: CoffeeProps[];
-	menu: CoffeeProps[];
+interface MenuState {
+	AllMenu: MenuProps[];
+	menu: MenuProps[];
 	categories: CategoryType[];
-	setMenu: (items: CoffeeProps[]) => void;
+	setMenu: (items: MenuProps[]) => void;
 }
 
 const initialState = coffeeDB.slice(0, 6);
 console.log('initialState', initialState);
-const useMenuStore = create<CoffeeState>((set) => ({
+const useMenuStore = create<MenuState>((set) => ({
 	AllMenu: coffeeDB,
 	menu: initialState,
 	categories: ['coffee', 'blended', 'seasonalMenu'],
-	setMenu: (items: CoffeeProps[]) => set((state) => ({ menu: [...state.menu, ...items] })),
+	setMenu: (items: MenuProps[]) => set((state) => ({ menu: [...state.menu, ...items] })),
 }));
 
 export default useMenuStore;
