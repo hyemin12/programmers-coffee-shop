@@ -14,7 +14,7 @@ const BackgroundImg = ({ image, height, children }: BackgroundImgProps) => {
 		</Background>
 	);
 };
-const Background = styled.div<{ $bgImg: string; $height: string }>`
+const Background = styled.section<{ $bgImg: string; $height: string }>`
 	width: 100%;
 	height: ${({ $height }) => $height};
 	background-image: url(${({ $bgImg }) => $bgImg});
