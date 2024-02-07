@@ -7,6 +7,7 @@ import Reward from './Reward';
 import useMenuStore, { MenuProps } from '@/store/menu';
 import { ButtonRow, Inner } from './Home.styles';
 import MainPromotion from './MainPromotion';
+import MainReserve from './MainReserve';
 
 function Home() {
 	const { setMenu, menu, AllMenu } = useMenuStore();
@@ -27,6 +28,7 @@ function Home() {
 			<Visual />
 			<Reward />
 			<MainPromotion />
+			<MainReserve />
 
 			<Inner>
 				<MenuList list={menu} />
