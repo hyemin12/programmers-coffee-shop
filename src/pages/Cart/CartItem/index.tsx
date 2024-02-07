@@ -1,8 +1,8 @@
 import { Button } from 'react-bootstrap';
-import useCartStore, { ICart } from '../../../store/cart';
+import useCartStore, { ICart } from '@/store/cart';
 import { InfoWrapper, ItemContainer, QuantityAndTotalPrice, QuantityWrapper } from './CartItem.styles';
-import { handleLocalString } from '../../../util/handleLocalString';
 import Checkbox from './Checkbox';
+import { handleLocalString } from '@/util/handleLocalString';
 
 const CartItem = ({ id, image, name, nameEn, quantity, price }: ICart) => {
 	const { updateCartItem, deleteCartItem } = useCartStore();

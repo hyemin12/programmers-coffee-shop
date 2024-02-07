@@ -1,8 +1,8 @@
 import { Button } from 'react-bootstrap';
 import styled from 'styled-components';
-import Layout from '../../components/Layout';
+import Layout from '@/components/Layout';
 import CartItem from './CartItem';
-import useCartStore from '../../store/cart';
+import useCartStore from '@/store/cart';
 
 const Cart = () => {
 	const { cartItems, clearSelectedItem, clearCartItems } = useCartStore();

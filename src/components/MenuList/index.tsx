@@ -1,7 +1,7 @@
 import { Container, Row } from 'react-bootstrap';
 import styled from 'styled-components';
 import MenuItem from '../MenuItem';
-import { MenuProps } from '../../store/menu';
+import { MenuProps } from '@/store/menu';
 
 const MenuList = ({ list }: { list: MenuProps[] }) => {
 	return (

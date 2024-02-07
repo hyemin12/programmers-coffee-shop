@@ -1,5 +1,5 @@
 import { Link, useLocation } from 'react-router-dom';
-import { MenuProps } from '../../store/menu';
+import { MenuProps } from '@/store/menu';
 import { MenuItemStyle } from './MenuItem.styles';
 
 const MenuItem = ({ image, name, id }: MenuProps) => {

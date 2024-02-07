@@ -1,7 +1,7 @@
-import Layout from '../../components/Layout';
-import MenuList from '../../components/MenuList';
-import useMenuStore, { CategoryType } from '../../store/menu';
-import decafImg from '../../assets/images/logo_decaf.png';
+import Layout from '@/components/Layout';
+import MenuList from '@/components/MenuList';
+import useMenuStore, { CategoryType } from '@/store/menu';
+import decafImg from '@/assets/images/logo_decaf.png';
 import { CategoryTitleStyle } from './Menus.styles';
 
 const Menus = () => {

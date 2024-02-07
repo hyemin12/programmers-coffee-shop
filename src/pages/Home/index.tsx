@@ -1,10 +1,10 @@
 import { useState } from 'react';
 import { Button } from 'react-bootstrap';
-import Layout from '../../components/Layout';
-import Visual from '../../components/Visual';
-import MenuList from '../../components/MenuList';
+import Layout from '@/components/Layout';
+import Visual from '@/components/Visual';
+import MenuList from '@/components/MenuList';
 import Reward from './Reward';
-import useMenuStore, { MenuProps } from '../../store/menu';
+import useMenuStore, { MenuProps } from '@/store/menu';
 import { ButtonRow, Inner } from './Home.styles';
 
 function Home() {

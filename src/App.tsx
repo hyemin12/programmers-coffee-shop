@@ -3,8 +3,8 @@ import Home from './pages/Home';
 import Detail from './pages/Detail';
 import Menus from './pages/Menus';
 import Cart from './pages/Cart';
-import NotFound from './pages/NotFound/NotFound';
 import Company from './pages/Company';
+import NotFound from './pages/NotFound';
 
 import './assets/css/bootstrap.min.css';
 

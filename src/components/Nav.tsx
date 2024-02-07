@@ -1,8 +1,8 @@
 import { Container, Nav, Navbar } from 'react-bootstrap';
 import { NavLink, Link } from 'react-router-dom';
 import styled from 'styled-components';
-import cartIcon from '../assets/images/shopping-cart.png';
-import useCartStore from '../store/cart';
+import cartIcon from '@/assets/images/shopping-cart.png';
+import useCartStore from '@/store/cart';
 
 const NavComponents = () => {
 	const { cartItems } = useCartStore();

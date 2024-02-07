@@ -1,5 +1,5 @@
 import { create } from 'zustand';
-import { coffeeDB } from '../data';
+import { coffeeDB } from '@/data';
 
 export type CategoryType = 'coffee' | 'blended' | 'seasonalMenu';
 

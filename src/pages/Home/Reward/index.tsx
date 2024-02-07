@@ -1,5 +1,5 @@
 import { Button, Row } from 'react-bootstrap';
-import RewardImg from '../../../assets/images/rewards-logo.png';
+import RewardImg from '@/assets/images/rewards-logo.png';
 import { Bold, GiftInfoContents, RewardContainer, RewardInfoContents, RewardInner } from './Reward.styles';
 
 const Reward = () => {

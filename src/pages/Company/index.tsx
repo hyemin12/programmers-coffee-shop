@@ -1,5 +1,5 @@
-import labImg from '../../assets/images/lab.jpg';
-import Layout from '../../components/Layout';
+import labImg from '@/assets/images/lab.jpg';
+import Layout from '@/components/Layout';
 import { LabImgStyle, MainImgStyle, PointFont, RowContainer } from './Company.styles';
 
 const Company = () => {

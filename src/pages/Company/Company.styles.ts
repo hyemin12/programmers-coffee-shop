@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { Row } from 'react-bootstrap';
-import mainImg from '../../assets/images/coffeebg.jpg';
-import bgImg from '../../assets/images/cp_infomt_bg.png';
+import mainImg from '@/assets/images/coffeebg.jpg';
+import bgImg from '@/assets/images/cp_infomt_bg.png';
 
 export const MainImgStyle = styled.div`
 	width: 100%;

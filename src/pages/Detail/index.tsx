@@ -1,9 +1,9 @@
 import { useParams } from 'react-router-dom';
 import { Button, Col, Row } from 'react-bootstrap';
-import Layout from '../../components/Layout';
-import useMenuStore from '../../store/menu';
-import useCartStore from '../../store/cart';
-import { handleLocalString } from '../../util/handleLocalString';
+import Layout from '@/components/Layout';
+import useMenuStore from '@/store/menu';
+import useCartStore from '@/store/cart';
+import { handleLocalString } from '@/util/handleLocalString';
 import { CannotFind, CoffeeImgWrapper, Description, NameWrapper, PriceWrapper } from './Detail.styles';
 
 /** 커피이미지, 커피명, 커피설명, 커피가격, 카드에 담기 버튼 */

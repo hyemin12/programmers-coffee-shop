@@ -1,6 +1,6 @@
 import React from 'react';
-import NavComponents from './Nav';
 import styled from 'styled-components';
+import NavComponents from './Nav';
 
 const Layout = ({ children, $maxWidth = false }: { children: React.ReactNode; $maxWidth?: boolean }) => {
 	const thisYear = new Date().getFullYear();

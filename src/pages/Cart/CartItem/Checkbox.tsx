@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import useCartStore from '../../../store/cart';
+import useCartStore from '@/store/cart';
 import { CheckboxContainer } from './CartItem.styles';
 
 const Checkbox = ({ id }: { id: number }) => {

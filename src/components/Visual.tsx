@@ -1,11 +1,11 @@
 import styled, { css, keyframes } from 'styled-components';
 import { Button } from 'react-bootstrap';
-import Backdrop from '../assets/images/2024_spring_top_bg.jpg';
+import Backdrop from '@/assets/images/2024_spring_top_bg.jpg';
 
-import logo from '../assets/images/2024_spring_top_logo.png';
-import Drink1 from '../assets/images/2024_spring_top_drink1.png';
-import Drink2 from '../assets/images/2024_spring_top_drink2.png';
-import Drink3 from '../assets/images/2024_spring_top_drink3.png';
+import logo from '@/assets/images/2024_spring_top_logo.png';
+import Drink1 from '@/assets/images/2024_spring_top_drink1.png';
+import Drink2 from '@/assets/images/2024_spring_top_drink2.png';
+import Drink3 from '@/assets/images/2024_spring_top_drink3.png';
 
 const Visual = () => {
 	return (
