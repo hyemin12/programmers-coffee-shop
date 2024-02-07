@@ -32,6 +32,9 @@ const TextWrapper = styled.div`
 	left: 50%;
 	transform: translate(-50%, -50%);
 	z-index: 1;
+	button {
+		margin-left: 109px;
+	}
 `;
 const CollageImg = styled.div`
 	position: absolute;
