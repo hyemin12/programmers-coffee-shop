@@ -10,7 +10,7 @@ interface BackgroundImgProps {
 const BackgroundImg = ({ image, height, children }: BackgroundImgProps) => {
 	return (
 		<Background $bgImg={image} $height={height}>
-			{children}
+			<Inner>{children}</Inner>
 		</Background>
 	);
 };
@@ -20,6 +20,15 @@ const Background = styled.section<{ $bgImg: string; $height: string }>`
 	background-image: url(${({ $bgImg }) => $bgImg});
 	background-position: center;
 	background-size: cover;
+`;
+export const Inner = styled.div`
+	width: 100%;
+	max-width: 1200px;
+	height: 100%;
+	margin: 0 auto;
 	position: relative;
+	@media screen and (min-width: 1200px) {
+		max-width: 85%;
+	}
 `;
 export default BackgroundImg;

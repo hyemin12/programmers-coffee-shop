@@ -9,6 +9,7 @@ import { ButtonRow, Inner } from './Home.styles';
 import MainPromotion from './MainPromotion';
 import MainReserve from './MainReserve';
 import Favorite from './Favorite';
+import ReserveMagazine from './ReserveMagazine';
 
 function Home() {
 	const { setMenu, menu, AllMenu } = useMenuStore();
@@ -31,6 +32,7 @@ function Home() {
 			<MainPromotion />
 			<MainReserve />
 			<Favorite />
+			<ReserveMagazine />
 
 			<Inner>
 				<MenuList list={menu} />
