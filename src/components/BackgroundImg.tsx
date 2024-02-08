@@ -3,23 +3,24 @@ import styled from 'styled-components';
 
 interface BackgroundImgProps {
 	$maxWidth?: boolean;
+	$basePosition?: string;
 	image: string;
 	height: string;
 	children: React.ReactNode;
 }
 
-const BackgroundImg = ({ image, height, children, $maxWidth = true }: BackgroundImgProps) => {
+const BackgroundImg = ({ $basePosition = 'center', image, height, children, $maxWidth = true }: BackgroundImgProps) => {
 	return (
-		<Background $bgImg={image} $height={height}>
+		<Background $bgImg={image} $height={height} $basePosition={$basePosition}>
 			<Inner $maxWidth={$maxWidth}>{children}</Inner>
 		</Background>
 	);
 };
-const Background = styled.section<{ $bgImg: string; $height: string }>`
+const Background = styled.section<{ $bgImg: string; $basePosition: string; $height: string }>`
 	width: 100%;
 	height: ${({ $height }) => $height};
 	background-image: url(${({ $bgImg }) => $bgImg});
-	background-position: center;
+	background-position: ${({ $basePosition }) => $basePosition};
 	background-size: cover;
 	overflow: hidden;
 `;

@@ -5,7 +5,7 @@ import { Button } from 'react-bootstrap';
 
 const StarbucksCard = () => {
 	return (
-		<BackgroundImg image={bgImg} height='430px'>
+		<BackgroundImg image={bgImg} height='430px' $basePosition='20% 50%'>
 			<TextWrapper element='card'>
 				<h3>
 					스타벅스만의 특별함, <br />

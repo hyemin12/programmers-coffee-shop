@@ -5,7 +5,7 @@ import { Button } from 'react-bootstrap';
 
 const StarbucksEGiftCard = () => {
 	return (
-		<BackgroundImg image={bgImg} height='430px'>
+		<BackgroundImg image={bgImg} height='430px' $basePosition='right'>
 			<TextWrapper element='eGift'>
 				<h3>
 					쉽고 빠르게 스타벅스 카드를 <b>구매하는 방법</b>, <br />
