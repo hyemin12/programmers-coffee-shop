@@ -10,6 +10,7 @@ import MainPromotion from './MainPromotion';
 import MainReserve from './MainReserve';
 import Favorite from './Favorite';
 import ReserveMagazine from './ReserveMagazine';
+import Store from './Store';
 
 function Home() {
 	const { setMenu, menu, AllMenu } = useMenuStore();
@@ -33,6 +34,7 @@ function Home() {
 			<MainReserve />
 			<Favorite />
 			<ReserveMagazine />
+			<Store />
 
 			<Inner>
 				<MenuList list={menu} />

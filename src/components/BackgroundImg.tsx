@@ -20,6 +20,7 @@ const Background = styled.section<{ $bgImg: string; $height: string }>`
 	background-image: url(${({ $bgImg }) => $bgImg});
 	background-position: center;
 	background-size: cover;
+	overflow: hidden;
 `;
 export const Inner = styled.div`
 	width: 100%;
