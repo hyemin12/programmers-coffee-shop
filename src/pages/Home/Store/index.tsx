@@ -9,7 +9,7 @@ import { Button } from 'react-bootstrap';
 
 const Store = () => {
 	return (
-		<BackgroundImg height='400px' image={bgImg}>
+		<BackgroundImg height='400px' image={bgImg} $maxWidth={false}>
 			<TextWrapper>
 				<h3>
 					전국 어디에서나 <b>스타벅스와 함께!</b>
