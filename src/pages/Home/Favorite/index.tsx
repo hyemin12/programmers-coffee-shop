@@ -1,8 +1,6 @@
 import styled from 'styled-components';
 import bgImg from '@/assets/images/240126_pc_pick_bg.jpg';
 import cupsImg from '@/assets/images/240126_spring_img.png';
-import TextImg1 from '@/assets/images/fav_prod_txt01.png';
-import TextImg2 from '@/assets/images/fav_prod_txt02.png';
 import MoreInfoButton from '@/components/MoreInfoButton';
 import { Inner } from '@/components/BackgroundImg';
 
@@ -11,15 +9,24 @@ const Favorite = () => {
 		<Background>
 			<Inner>
 				<TextWrapper>
-					<div className='text1'>
-						<img src={TextImg1} alt='PICK YOUR FAVORITE' />
-					</div>
-					<div className='text2'>
-						<img
-							src={TextImg2}
-							alt='다양한 메뉴를 스타벅스에서 즐겨보세요. 스타벅스만의 특별함을 경험할 수 있는 최상의 선택 음료. 스타벅스 커피와 완벽한 어울림을 자랑하는 푸드. 다양한 시도와 디자인으로 가치를 더하는 상품. 소중한 사람에게 마음을 전하는 가장 좋은 방법 스타벅스 카드'
-						/>
-					</div>
+					<h1>
+						<span>PICK</span>
+						<br />
+						YOUR
+					</h1>
+					<h2>FAVORITE</h2>
+
+					<h3>
+						<b>다양한 메뉴</b>를
+						<br /> <b>스타벅스</b>에서 즐겨보세요.
+					</h3>
+					<p>
+						스타벅스만의 특별함을 경험할 수 있는 최상의 선택 음료
+						<br /> 스타벅스 커피와 완벽한 어울림을 자랑하는 푸드
+						<br />
+						다양한 시도와 디자인으로 가치를 더하는 상품
+						<br /> 소중한 사람에게 마음을 전하는 가장 좋은 방법 스타벅스 카드
+					</p>
 
 					<MoreInfoButton color='#fff' marginTop={1} />
 				</TextWrapper>
@@ -42,26 +49,28 @@ const Background = styled.section`
 `;
 const TextWrapper = styled.div`
 	width: 25vw;
-	max-width: 362px;
+	max-width: 380px;
 	text-align: end;
+	color: #fff;
 	position: absolute;
-	top: 20%;
+	top: 19%;
 	left: 97px;
-	img {
-		display: block;
-		width: 100%;
-	}
-	.text1 {
-		height: 200px;
-
-		img {
-			width: 80%;
-			float: right;
+	h1 {
+		margin-bottom: 0;
+		font-size: 6em;
+		font-weight: 600;
+		line-height: 1em;
+		span {
+			letter-spacing: 0.1em;
 		}
 	}
-	.text2 {
-		margin-top: 30px;
-		height: 156px;
+	h2 {
+		margin-bottom: 0.5em;
+		letter-spacing: 0.05em;
+		font-size: 3em;
+	}
+	h3 {
+		font-weight: normal;
 	}
 `;
 const CupsImage = styled.div`
