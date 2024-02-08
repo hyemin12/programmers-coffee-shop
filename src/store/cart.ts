@@ -27,7 +27,7 @@ const useCartStore = create<CartState>()(
 				addCartItem: (newItem: ICart) =>
 					set((state) => {
 						const newItemId = newItem.id;
-						const isExist = state.cartItems.filter((item) => item.id === newItemId).length;
+						const isExist = state.cartItems.find((item) => item.id === newItemId);
 						if (isExist) {
 							return {
 								cartItems: state.cartItems.map((item) =>

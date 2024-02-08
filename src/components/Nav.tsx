@@ -9,7 +9,7 @@ const NavComponents = () => {
 	const menu = [
 		{ path: '/coffee', name: 'MENU' },
 		{ path: '/company', name: 'starbucks' },
-		{ path: '/members', name: 'starbucks rewards' },
+		{ path: '/rewards', name: 'starbucks rewards' },
 	];
 	return (
 		<NavBarStyle data-bs-theme='dark'>

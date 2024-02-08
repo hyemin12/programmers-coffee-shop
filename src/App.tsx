@@ -7,6 +7,7 @@ import Company from './pages/Company';
 import NotFound from './pages/NotFound';
 
 import './assets/css/bootstrap.min.css';
+import StarbucksRewards from './pages/StarbucksReward';
 
 function App() {
 	return (
@@ -18,6 +19,7 @@ function App() {
 					<Route path='/coffee/:id' element={<Detail />} />
 					<Route path='/cart' element={<Cart />} />
 					<Route path='/company' element={<Company />} />
+					<Route path='/rewards' element={<StarbucksRewards />} />
 					<Route path='/*' element={<NotFound />} />
 				</Routes>
 			</BrowserRouter>
