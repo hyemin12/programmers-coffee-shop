@@ -5,12 +5,26 @@ import useCartStore from '@/store/cart';
 import { ButtonWrapper, CartList, OrderButton, EmptyCart } from './Cart.styles';
 
 const Cart = () => {
-	const { cartItems, selectedItems, clearSelectedItem, clearCartItems, addAllSelectedItems } = useCartStore();
+	const {
+		cartItems,
+		selectedItems,
+		clearSelectedItem,
+		clearCartItems,
+		addAllSelectedItems,
+		deleteCartItem,
+		deleteSelectedItems,
+	} = useCartStore();
 
 	/** 장바구니에 담긴 상품 목록, 선택한 상품 목록 삭제 */
-	const deleteItems = () => {
+	const clearItems = () => {
 		clearSelectedItem();
 		clearCartItems();
+	};
+
+	/** 선택한 상품만 삭제 */
+	const clearSelectedItems = () => {
+		deleteCartItem(selectedItems);
+		deleteSelectedItems(selectedItems);
 	};
 
 	/** 전체 선택 클릭 액션
@@ -30,8 +44,8 @@ const Cart = () => {
 			<ButtonWrapper>
 				<Button onClick={selectedAllItems}>전체 선택</Button>
 				<div className='delete_button_group'>
-					<Button>선택삭제</Button>
-					<Button onClick={deleteItems}>전체삭제</Button>
+					<Button onClick={clearSelectedItems}>선택삭제</Button>
+					<Button onClick={clearItems}>전체삭제</Button>
 				</div>
 			</ButtonWrapper>
 

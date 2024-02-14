@@ -21,7 +21,7 @@ interface CartState {
 	updateCartItem: (id: number, quantity: number) => void;
 	addSelectedItem: (id: number) => void;
 	addAllSelectedItems: () => void;
-	deleteSelectedItem: (id: number) => void;
+	deleteSelectedItems: (id: number[]) => void;
 	clearSelectedItem: () => void;
 }
 
@@ -46,8 +46,10 @@ const useCartStore = create<CartState>()(
 					})),
 				addSelectedItem: (id: number) => set((state) => ({ selectedItems: [...state.selectedItems, id] })),
 				addAllSelectedItems: () => set((state) => ({ selectedItems: state.cartItems.map((item) => item.id) })),
-				deleteSelectedItem: (id: number) =>
-					set((state) => ({ selectedItems: state.selectedItems.filter((item) => item !== id) })),
+				deleteSelectedItems: (id: number[]) =>
+					set((state) => ({
+						selectedItems: state.selectedItems.filter((item) => !id.includes(item)),
+					})),
 				clearSelectedItem: () => set(() => ({ selectedItems: [] })),
 			}),
 			{
