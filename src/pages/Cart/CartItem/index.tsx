@@ -7,10 +7,10 @@ import { handleLocalString } from '@/util/handleLocalString';
 const CartItem = ({ id, image, name, nameEn, quantity, price }: ICart) => {
 	const { updateCartItem, deleteCartItem } = useCartStore();
 
-	const deleteCartItemHandler = () => {
+	const clearCartItem = () => {
 		deleteCartItem([id]);
 	};
-	const updateCartItemHandler = (newQuantity: number) => {
+	const updateCartItemQuantity = (newQuantity: number) => {
 		updateCartItem(id, newQuantity);
 	};
 
@@ -30,7 +30,7 @@ const CartItem = ({ id, image, name, nameEn, quantity, price }: ICart) => {
 					<QuantityWrapper>
 						<Button
 							variant='outline-secondary'
-							onClick={() => updateCartItemHandler(quantity - 1)}
+							onClick={() => updateCartItemQuantity(quantity - 1)}
 							disabled={quantity === 1}
 						>
 							-
@@ -38,7 +38,7 @@ const CartItem = ({ id, image, name, nameEn, quantity, price }: ICart) => {
 						<p>{quantity}</p>
 						<Button
 							variant='outline-secondary'
-							onClick={() => updateCartItemHandler(quantity + 1)}
+							onClick={() => updateCartItemQuantity(quantity + 1)}
 							disabled={quantity >= 5}
 						>
 							+
@@ -48,7 +48,7 @@ const CartItem = ({ id, image, name, nameEn, quantity, price }: ICart) => {
 						<p>{handleLocalString(price * quantity)}원</p>
 					</div>
 				</QuantityAndTotalPrice>
-				<Button type='submit' variant='outline-secondary' onClick={deleteCartItemHandler}>
+				<Button type='submit' variant='outline-secondary' onClick={clearCartItem}>
 					삭제
 				</Button>
 			</form>
