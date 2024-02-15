@@ -15,7 +15,7 @@ export const TextWrapper = styled.div`
 	text-align: end;
 	color: #fff;
 	position: absolute;
-	top: 19%;
+	/* top: 19%; */
 	left: 97px;
 	h1 {
 		margin-bottom: 0;
